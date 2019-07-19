@@ -10,7 +10,8 @@
         body {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1.125em;
-        margin: 20px;
+        margin: 30%;
+
             }
 
         H1 {
@@ -18,40 +19,133 @@
             border-bottom: 2px solid #009;
             margin-bottom: 50px;
         }
+
+        form.from-group {
+            margin: 30%;
+        }
     
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <H1>加入會員</H1>
-    <p>輸入表單資料</p>
-    <form method="post" class="form-horizontal" id="frm">
-        <fieldset>            
-            <legend>輸入詳細資料</legend>
-            <ol>
-                <li><label for="txtName">名字:</label> <input id="txtName"
-                    name="txtName" type="text" class="formFields"/></li>
-                <li><label for="txtEmail">郵件:</label> <input
-                    id="txtEmail" name="txtEmail" type="text" class="formFields" /></li>
-                <li><label for="txtPhone">電話:</label> <input
-                    id="txtPhone" name="txtPhone" type="text" class="formFields" /></li>
-                <li><label for="txtPhone">電話:</label> <input
-                    id="txtPhone" name="txtPhone" type="text" class="formFields" /></li>
-                <li><label for="txtPhone">電話:</label> <input
-                    id="txtPhone" name="txtPhone" type="text" class="formFields" /></li>
-                
-                
-            </ol>
-
-            <input id="btnSubmit" name="btnSubmit" type="submit" class="submit"
-                value="Send" />
+    <p style="text-align: center">輸入表單資料</p>
+    <form method="post" class="form-horizontal" onsubmit="localStorage.clear()" id="frm">
+        <fieldset>
+        <!-- Form Name -->
+        <legend>加入會員</legend>
+        
+        <!-- Text input-->
+        <div class="form-group"> 
+          <label class="col-md-4 control-label" for="account">帳號(不得為空)</label>  
+          <div class="col-md-4">
+          <input id="account" name="account" type="text" placeholder="" class="form-control input-md">
             
+          </div>
+        </div>
+        
+        <!-- Password input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="password">密碼</label>
+          <div class="col-md-4">
+            <input id="password" name="password" type="password" placeholder="" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="Name">姓名</label>  
+          <div class="col-md-4">
+          <input id="name" name="姓名" type="text" placeholder="" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="email">郵件</label>  
+          <div class="col-md-4">
+          <input id="email" name="email" type="text" placeholder="" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="telephone">手機(輸入大於五碼數字，小於五碼無法提交)</label>  
+          <div class="col-md-4">
+          <input id="telephone" name="telephone" type="text" placeholder="" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="adress">地址</label>  
+          <div class="col-md-4">
+          <input id="adress" name="adress" type="text" placeholder="" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+        <!-- Multiple Radios -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="gender">性別</label>
+          <div class="col-md-4">
+          <div class="radio">
+            <label for="gender-0">
+              <input type="radio" name="gender" id="gender-0" value="1" checked="checked">
+              男
+            </label>
+            </div>
+          <div class="radio">
+            <label for="gender-1">
+              <input type="radio" name="gender" id="gender-1" value="2">
+              女
+            </label>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="submit"></label>
+          <div class="col-md-4">
+            <input type="submit" id="submit" name="submit" class="btn btn-primary" />
+
+          </div>
+        </div>
+        
         </fieldset>
-    </form>
+        </form>
+        
+
 <script>
-document.forms.onsubmit = function () { localStorage.clear(); 
-	return flase;
-	};
+
+$("#frm").submit(function () {
+		
+    var x=document.getElementById("telephone").value;
+    var y=document.getElementById("account").value;
+
+    if(y.length == 0)
+    {
+      alert("帳號不得為空");
+      return false;
+    }
+    
+    if(x>0 && x<10000){
+      alert("電話小於五碼");
+      return false;
+    }
+
+   
+  
+		localStorage.clear();
+	});
+
+
+
 </script>
      
 </body>
