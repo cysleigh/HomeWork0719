@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HomeWork0919加入會員</title>
+    <script src="jquery-1.9.1.min.js"></script>
+    <style type="text/css">
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.125em;
+        margin: 20px;
+            }
+
+        H1 {
+            text-align: center;
+            border-bottom: 2px solid #009;
+            margin-bottom: 50px;
+        }
+    
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <H1>加入會員</H1>
+    <p>輸入表單資料</p>
+    <form method="post" class="form-horizontal" id="frm">
+        <fieldset>            
+            <legend>輸入詳細資料</legend>
+            <ol>
+                <li><label for="txtName">名字:</label> <input id="txtName"
+                    name="txtName" type="text" class="formFields"/></li>
+                <li><label for="txtEmail">郵件:</label> <input
+                    id="txtEmail" name="txtEmail" type="text" class="formFields" /></li>
+                <li><label for="txtPhone">電話:</label> <input
+                    id="txtPhone" name="txtPhone" type="text" class="formFields" /></li>
+                <li><label for="txtPhone">電話:</label> <input
+                    id="txtPhone" name="txtPhone" type="text" class="formFields" /></li>
+                <li><label for="txtPhone">電話:</label> <input
+                    id="txtPhone" name="txtPhone" type="text" class="formFields" /></li>
+                
+                
+            </ol>
+
+            <input id="btnSubmit" name="btnSubmit" type="submit" class="submit"
+                value="Send" />
+            
+        </fieldset>
+    </form>
+<script>
+document.forms.onsubmit = function () { localStorage.clear(); 
+	return flase;
+	};
+</script>
+     
+</body>
+</html>
