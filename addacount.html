@@ -20,8 +20,17 @@
             margin-bottom: 50px;
         }
 
-        form.from-group {
-            margin: 30%;
+        form {
+            font:100% verdana,arial,sans-serif;
+            margin: 0;
+            margin-top: 100px;
+            margin-left: 700px;
+            padding: 0;
+            min-width: 500px;
+            max-width: 600px;
+            width: 560px; 
+            position:absolute; height:200px;
+            top:0; bottom:0; left:0; right:0;
         }
     
     </style>
@@ -31,95 +40,43 @@
     <H1>加入會員</H1>
     <p style="text-align: center">輸入表單資料</p>
     <form method="post" class="form-horizontal" onsubmit="localStorage.clear()" id="frm">
-        <fieldset>
-        <!-- Form Name -->
+        
         <legend>加入會員</legend>
+            <label class="" for="account">帳號(不得為空)</label>  
+            <input id="account" name="account" type="text" class="form-control input-md ">
+
+
+          <label class="" for="password">密碼</label>
+          <input id="password" name="password" type="password"  class="form-control input-md">
+
+          <label class="" for="Name">姓名</label>  
+          <input id="name" name="姓名" type="text"  class="form-control input-md">
         
-        <!-- Text input-->
-        <div class="form-group"> 
-          <label class="col-md-4 control-label" for="account">帳號(不得為空)</label>  
-          <div class="col-md-4">
-          <input id="account" name="account" type="text" placeholder="" class="form-control input-md">
+          <label class="" for="email">郵件</label>  
+          <input id="email" name="email" type="text"  class="form-control input-md">
             
-          </div>
-        </div>
-        
-        <!-- Password input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="password">密碼</label>
-          <div class="col-md-4">
-            <input id="password" name="password" type="password" placeholder="" class="form-control input-md">
+          <label class="" for="telephone">手機(輸入大於五碼數字，小於五碼無法提交)</label>  
+          <input id="telephone" name="telephone" type="text"  class="form-control input-md">
+
+          <label class="" for="adress">地址</label>  
+          <input id="adress" name="adress" type="text"  class="form-control input-md">
             
-          </div>
-        </div>
-        
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="Name">姓名</label>  
-          <div class="col-md-4">
-          <input id="name" name="姓名" type="text" placeholder="" class="form-control input-md">
-            
-          </div>
-        </div>
-        
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="email">郵件</label>  
-          <div class="col-md-4">
-          <input id="email" name="email" type="text" placeholder="" class="form-control input-md">
-            
-          </div>
-        </div>
-        
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="telephone">手機(輸入大於五碼數字，小於五碼無法提交)</label>  
-          <div class="col-md-4">
-          <input id="telephone" name="telephone" type="text" placeholder="" class="form-control input-md">
-            
-          </div>
-        </div>
-        
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="adress">地址</label>  
-          <div class="col-md-4">
-          <input id="adress" name="adress" type="text" placeholder="" class="form-control input-md">
-            
-          </div>
-        </div>
-        
-        <!-- Multiple Radios -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="gender">性別</label>
-          <div class="col-md-4">
-          <div class="radio">
-            <label for="gender-0">
-              <input type="radio" name="gender" id="gender-0" value="1" checked="checked">
+          <label class="" for="gender">性別</label>
+
+          <label for="gender-0">
+          <input type="radio" name="gender" id="gender-0" value="1" checked="checked">
               男
             </label>
-            </div>
-          <div class="radio">
             <label for="gender-1">
               <input type="radio" name="gender" id="gender-1" value="2">
               女
             </label>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Button -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="submit"></label>
-          <div class="col-md-4">
-            <input type="submit" id="submit" name="submit" class="btn btn-primary" />
 
-          </div>
-        </div>
-        
-        </fieldset>
-        </form>
-        
+          <label class="" for="submit"></label><br>
+
+          <input type="submit" id="submit" name="submit" class="btn btn-primary" />
+
+      </form>
 
 <script>
 
